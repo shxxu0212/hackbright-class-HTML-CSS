@@ -2,46 +2,72 @@
 <html>
 
   <head>
-    <!--<h1>Hello world.</h1>-->
+    <h1>AAAAAHHHHHH!</h1>
     <style type = "text/css">
     h1 {
         font-family: sans-serif;
     }
 
-
+/*
     #top {
         background-color: red;
         margin: 0;
 
     }
 
-/*    #middle {
+    #middle {
         width: 500px;
         height: 100px;
         background-color: red;
     }
-*/
+
     #bottom {
         background-color: blue;
         margin: 0;
-    }
+    }*/
 
-    div {
+    /*div {
         display: inline-block;
         margin: 0px;
-    }
+    }*/
 
     div.background {
-        width: 350px;
-        height: 200px;
+        width: 600px;
+        height: 130px;
+        margin: 10px;
+        background-color: #555555;
         }
 
-    div.box {
-        margin-top: 50px;
-        margin-left: 50px;
-        background-color: black;
-        width: 100px;
+    div.foreground {
+        margin: 6px 0 6px 6px;
+        background-color: #cccccc;
+        display: inline-block;
+    }
+
+    #row1{
+        width: 32%;
+        height: 90%;
+    }
+
+    #row2{
+        width: 24%;
         height: 100px;
+    }
+
+    #row2_2 {
+        width: 23.5%;
+        height: 75px;
+        vertical-align: top;
+    }
+
+    #row3 {
+        width: 49%;
+        height: 35px;
+    }
+
+    #row3_2 {
+        width: 48%;
+        height: 90%;
     }
 
     body {
@@ -52,12 +78,19 @@
 
   <body>
         <div id="top" class="background">
-            <div class="box" id="row1"></div>
-            <div class="box" id="row1"></div>
+            <div class="foreground" id="row1"></div><!--
+            --><div class="foreground" id="row1"></div><!--
+            --><div class="foreground" id="row1"></div>
         </div><!--
-     --><div id="bottom" class="background">
-            <div class="box" id="row2"></div>
-            <div class="box" id="row2"></div>
+     --><div id="middle" class="background">
+            <div class="foreground" id="row2"></div><!--
+            --><div class="foreground" id="row2_2"></div><!--
+            --><div class="foreground" id="row2"></div><!--
+            --><div class="foreground" id="row2_2"></div>
+        </div>
+        <div id="bottom" class="background">
+            <div class="foreground" id="row3"></div><!--
+            --><div class="foreground" id="row3_2"></div>
         </div>
         <!-- <div id="middle"></div> -->
 
