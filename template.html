@@ -32,13 +32,31 @@
     }*/
 
     div.background {
-        width: 600px;
-        height: 130px;
-        margin: 10px;
-        background-color: #555555;
+        width: 750px;
+        height: 200px;
+        padding: 15px 10px;
+        background-color: #cccccc;
+        margin: auto;
         }
 
-    div.foreground {
+    .shape {
+        width: 180px;
+        height: 180px;
+        border: 10px;
+        display: inline-block;
+        border-color: #555555;
+    }
+
+    #square {
+        border-style: double;
+    }
+
+    #circle {
+        border-radius: 50%;
+        border-style: dashed;
+    }
+
+    /*div.foreground {
         margin: 6px 0 6px 6px;
         background-color: #cccccc;
         display: inline-block;
@@ -68,7 +86,7 @@
     #row3_2 {
         width: 48%;
         height: 90%;
-    }
+    }*/
 
     body {
         margin: 0;
@@ -77,25 +95,12 @@
   </head>
 
   <body>
-        <div id="top" class="background">
-            <div class="foreground" id="row1"></div><!--
-            --><div class="foreground" id="row1"></div><!--
-            --><div class="foreground" id="row1"></div>
-        </div><!--
-     --><div id="middle" class="background">
-            <div class="foreground" id="row2"></div><!--
-            --><div class="foreground" id="row2_2"></div><!--
-            --><div class="foreground" id="row2"></div><!--
-            --><div class="foreground" id="row2_2"></div>
-        </div>
-        <div id="bottom" class="background">
-            <div class="foreground" id="row3"></div><!--
-            --><div class="foreground" id="row3_2"></div>
-        </div>
-        <!-- <div id="middle"></div> -->
 
-
-
+    <div class="background"><!--
+    --><div class='shape' id='square'></div>
+    <div class='shape' id='circle'></div>
+    <div class='shape' id='square'></div>
+    </div>
   </body>
 
 </html>
