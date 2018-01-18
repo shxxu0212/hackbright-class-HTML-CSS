@@ -1,12 +1,9 @@
-<!doctype html>
-<html>
-<head>
-  <title>Madlib</title>
-</head>
-    <body>
-
-        <h1>THIS IS MADNESS</h1>
-        <p>
+{% extends 'base.html' %}
+{% block title %} Madlib! {% endblock %}
+{% block content %}
+        <h2>THIS IS MADNESS</h2>
+        <div class="border">
+        <p class="story">
         There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab.
         When {{ person }} went to pick it up, it burst into flames in a totally
         {{ adjective }} way.
@@ -16,6 +13,5 @@
         {% else %}
             {{ weapons[0] }}.
         {% endif %}
-        </p>
-    </body>
-</html>
+        </p></div>
+{% endblock %}

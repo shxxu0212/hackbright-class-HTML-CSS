@@ -1,18 +1,15 @@
-<!doctype html>
-<html>
-<head>
-  <title>A Compliment</title>
-</head>
-<body>
-    Hi {{ person }}! I think you're not 
+{% extends 'base.html' %}
+{% block title %} A Compliment {% endblock %}
+{% block content %}
+<div class="greeting">
+    Hi {{ person }}!<br> I think you're <b>not</b> 
     {% for i in range (0, compliments|length - 1) %}
         {{ compliments[i] }},
-        {% endfor %} or {{ compliments[-1] }}! <br>
+        {% endfor %} or {{ compliments[-1] }}! <br><br>
     <form action="/game">
         Would you like to play a game?
         <input type="radio" name="game" value="yes">Si!
         <br><input type="submit">
     </form>
-
-</body>
-</html>
+</div>
+{% endblock %}

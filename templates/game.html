@@ -1,11 +1,11 @@
-<!doctype html>
-<html>
-<head>
-    <title>A Game</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block title %} A Game {% endblock %}
+{% block content %}
+<p>
+    <div class="border">
     <form action="/madlib">
         Input or select...<br>
+        <div class="questions">
         Person: 
         <select name="person">
             <option value="Angelina Jolie">Angelina Jolie
@@ -17,11 +17,13 @@
         Noun: <input type="text" name="noun"><br>
         Adjective: <input type="text" name="adjective"><br>
         Animal: <input type="text" name="animal"><br>
-        Weapon:
+        Weapon:<br>
             <input type="checkbox" name="weapons" value="enchanted brass knuckles">enchanted brass knuckles<br>
             <input type="checkbox" name="weapons" value="squirtle milk">squirtle milk<br>
             <input type="checkbox" name="weapons" value="bloodstained nunchuks">bloodstained nunchuks<br>
+        </div>
         <input type="submit">
     </form>
-</body>
-</html>
+    </div>
+</p>
+{% endblock %}
