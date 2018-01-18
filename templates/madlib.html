@@ -11,12 +11,11 @@
         When {{ person }} went to pick it up, it burst into flames in a totally
         {{ adjective }} way.
         Suddenly, a {{ animal }} leaps from the flames and attacks you with:
-        {% for i, weapon in enumerate(weapons) %}
-            {{ weapons[i] }}
-            <!-- {% if len(weapons) == 1}
-                {{ weapon }}.
-            {% if len(weapons) == 2}
-                {{ weapon }} and {{ weapon }} -->
+        {% if weapons|length > 1 %}
+            {{ ",".join(weapons[:-1]) }} and {{ weapons[-1] }}.
+        {% else %}
+            {{ weapons[0] }}.
+        {% endif %}
         </p>
     </body>
 </html>

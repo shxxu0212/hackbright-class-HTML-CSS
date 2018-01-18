@@ -1,8 +1,9 @@
 """A madlib game that compliments its users."""
 
-from random import choice
+from random import choice, sample
 
 from flask import Flask, render_template, request
+
 
 # "__name__" is a special Python variable for the name of the current module.
 # Flask wants to know this to know what any imported things are relative to.
@@ -35,11 +36,11 @@ def greet_person():
 
     player = request.args.get("person")
 
-    compliment = choice(AWESOMENESS)
+    compliments = sample(AWESOMENESS, 3)
 
     return render_template("compliment.html",
                            person=player,
-                           compliment=compliment)
+                           compliments=compliments)
 
 @app.route('/game')
 def show_madlib_form():
@@ -54,11 +55,16 @@ def show_madlib():
     person = request.args.get("person")
     color = request.args.get("color")
     adjective = request.args.get("adjective")
+    animal = request.args.get("animal")
+    weapons = request.args.getlist("weapons")
+
     return render_template("madlib.html",
                             noun=noun,
                             person=person,
                             color=color,
-                            adjective=adjective)
+                            adjective=adjective,
+                            animal=animal,
+                            weapons=weapons)
 
 
 if __name__ == '__main__':
